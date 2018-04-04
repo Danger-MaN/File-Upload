@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="{dir}">
+<!-- Powered by kleefa || URL www.kleefa.com -->
+<head>
+	<title>{title}(title? &#9679; :){config.sitename}</title>
+    <!-- Site Mobile scale -->
+<meta name="viewport" content="width=device-width; initial-scale=0.5; maximum-scale=2.0; user-scalable=true;">
+<!-- // Site Mobile scale -->
+
+	<meta http-equiv="Content-Type" content="text/html;charset={charset}" />
+	<meta http-equiv="Content-Language" content="{lang.LANG_SMALL_NAME}" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<meta name="copyrights" content="Powered by Kleefa || kleefa.ir" />
+    
+    
+  
+    <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">-->
+	<!-- metatags.info/all_meta_tags -->
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link rel="icon" type="image/gif" href="images/favicon.gif" />
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+	<link rel="apple-touch-startup-image" href="images/iPhone.png" />
+	<link rel="stylesheet" type="text/css" media="all" href="{STYLE_PATH}css/stylesheet.css" />
+
+	<script type="text/javascript" src="{STYLE_PATH}jquery.js"></script>
+    <script type="text/javascript" src="{STYLE_PATH}javascript.js"></script>
+	<IS_BROWSER!="mobile">
+	<link rel="stylesheet" type="text/css" media="all" href="{STYLE_PATH}css/color.css" />
+	<IF NAME="{lang.DIR}==ltr"><link rel="stylesheet" type="text/css" media="all" href="{STYLE_PATH}css/ltr.css" /></IF>
+	<IS_BROWSER="ie6"><link rel="stylesheet" type="text/css" media="all" href="{STYLE_PATH}css/ie_6.css" /><style type="text/css">.logo, #main, .title, .pngfix { behavior: url('{STYLE_PATH}ie/iepngfix.htc')};	</style></IS_BROWSER>
+	<IS_BROWSER="ie"><link rel="stylesheet" type="text/css" media="all" href="{STYLE_PATH}css/ie.css" /><style type="text/css">.border_radius {behavior: url('{STYLE_PATH}ie/css3.htc')}</style></IS_BROWSER>
+	<script type="text/javascript">
+	<!--
+	document.write('<link rel="stylesheet" type="text/css" media="all" href="{STYLE_PATH}css/css3.css" />');
+	-->
+	</script>
+	<ELSE>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<link rel="stylesheet" type="text/css" href="{STYLE_PATH}css/mobile.css"  />
+	</IS_BROWSER>
+    
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+$(function() {
+$( document ).tooltip();
+});
+</script>
+<script type="text/javascript">
+<!--
+var number_of_uploads={config.filesnum};
+var LANG_PAST_URL_HERE = "{lang.PAST_URL_HERE}";
+var LANG_MORE_F_FILES = "{lang.MORE_F_FILES}";
+var STYLE_PATH  = "{STYLE_PATH}";
+-->
+</script>
+    
+
+<link rel="stylesheet" type="text/css" media="all" href="{STYLE_PATH}css/kleefa.css" />
+<script src="{STYLE_PATH}upload.js"></script>
+
+	<!-- Extra code -->
+	{EXTRA_CODE_META}
+</head>
+<body<IF NAME="go_current == login"> onload="document.login_form.lname.focus();"</IF>>
+<!-- begin Main -->
+<div class="header_menu">
+
+<div class="header_menu1">
+ <span>
+
+
+
+
+</span>
+
+<div class="login_div">
+
+<ul>
+<LOOP NAME="side_menu"><IF LOOP="show">
+				<li><a href="{{url}}" (go_current=={{name}}?class="current":)><IS_BROWSER!="mobile"><img src="{STYLE_PATH}images/{{name}}.png" style="float:right;" class="pngfix" alt="{lang.LOGIN}" style="vertical-align:middle;" /></IS_BROWSER>{{title}} <IF LOOP="name==logout">[ {username} ]</IF></a></li>
+				</IF></LOOP>
+</ul>
+</div>
+
+
+</div>
+
+</div>
+
+<div id="main">
+
+	<!--begin Header-->
+    
+
+    
+	<div id="header" class="clearfix">
+		<h1><a href="{config.siteurl}" class="logo"><img src="{STYLE_PATH}/images/logo.png" alt="{config.sitename}" /></a></h1>
+        <div class="header_left">
+        <a href="" class="facebook"></a>
+        <a href="" class="twitter"></a>
+        <a href="" class="rss"></a>
+        <a href="" class="google"></a>
+        <a href="" class="youtube"></a>
+        </div>
+	</div>
+	<!-- @end-Header -->
+
+	<div class="clr"></div>
+
+	<!-- begin Top Navigation -->
+<div class="top_menu_content">
+	<div class="top_nav">
+		<ul class="menu">
+		<li>
+            <img src="{STYLE_PATH}images/home.png">
+            <a class="current" href="index.php">الصفحة الرئيسية</a>
+            </li>
+			<li>
+            <img src="{STYLE_PATH}images/url.png">
+            <a class="current" href="url.php">رفع من رابط</a>
+            </li>
+            <li>
+            <img src="{STYLE_PATH}images/shroot.png">
+            <a href="go.php?go=rules">القوانين</a>
+            </li>
+            <li>
+            <img src="{STYLE_PATH}images/allowed.png">
+            <a href="go.php?go=guide">الملفات والأحجام</a>
+            </li>
+            <li>
+            <img src="{STYLE_PATH}images/counters.png">
+            <a href="go.php?go=stats">احصائيات</a>
+            </li>
+            <li>
+            <img src="{STYLE_PATH}images/call.png">
+            <a href="go.php?go=call">اتصل بنا</a>
+            </li>
+		</ul>
+	</div><!-- @end-Top-Navigation -->
+ </div>
+ 
+	<div class="clr"></div>
+
+	<!-- begin wrapper -->
+	<div id="wrapper" class="clearfix">
+
+	<IF NAME="extras.header">
+	<!-- begin extras header -->
+	<div class="dot"></div>
+		<div class="extras_header">{extras.header}</div>
+	<div class="dot"></div>
+	<!-- @end-extras-header -->
+	</IF>
+
+	<div class="clr"></div>
+
+	<!-- begin menu right -->
+	<!--<div id="sidebar">  
+		<div id="sidebar_box">
+		<IS_BROWSER!="mobile"> 
+			<img src="{user_avatar}" alt="{username}" title="{username}" height="90" width="100" />
+		</IS_BROWSER>
+			<ul class="menu">
+				<LOOP NAME="side_menu"><IF LOOP="show">
+				<li><a href="{{url}}" (go_current=={{name}}?class="current":)><IS_BROWSER!="mobile"><img src="{STYLE_PATH}images/{{name}}.png" style="float:right;" class="pngfix" alt="{lang.LOGIN}" style="vertical-align:middle;" /></IS_BROWSER>{{title}} <IF LOOP="name==logout">[ {username} ]</IF></a></li>
+				</IF></LOOP>
+			</ul>
+		</div>
+		<div class="dot clr"></div>
+	</div><!-- @end-menu-right -->
+
+<div class="content_top">
+</div>
+<div class="content_center">
